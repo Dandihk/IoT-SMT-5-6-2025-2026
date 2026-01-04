@@ -8,8 +8,23 @@
 ## Tugas
 
 - **[TP 1](/TP1%20Memahami%20Konsep%20Internet%20of%20Things/Pertemuan%201/Tugas/)** 
+1. traffic light
+2. read data sensor
+3. Membuat Tampilan GUI Oled
+4. Membuat intergrasi ke Bylnk
+
 - **TP 2** Menerapkan perangkat IoT mikroposessor dan mikrocontroller
+1. Design Project IOT
+2. Project IOT
 - **TP 3** Mendokumentasikan dan mengomunikasikan hasil sistem IoT
+1. Dokumentasi Laporan Project IOT
+2. Presentasi Project IOT
+
+## Pembagian kelompok
+bagi kelompok menjadi 4 kelompok
+
+## Pak IOT
+mendapat 1 pack IOT untuk ber dua
 
 
 # Microcontroller
