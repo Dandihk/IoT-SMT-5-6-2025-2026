@@ -1,7 +1,7 @@
 # Oled 0.9 inch
 Layar OLED 0.96 inch adalah salah satu modul layar paling populer untuk ESP32 karena bentuknya kecil, hemat daya, dan sangat tajam. Layar ini biasanya memiliki resolusi 128x64 piksel dan menggunakan protokol komunikasi I2C.
 
-![alt text](image-2.png)
+![alt text](/TP1%20Memahami%20Konsep%20Internet%20of%20Things/Pertemuan%202/Media/oled.png)
 ## Spesifikasi:
 - Ukuran Layar: 0.96 inch.
 - Resolusi: 128 x 64 piksel.
@@ -24,7 +24,7 @@ Untuk menggunakannya di esp32 perlu menggunakan library **U8G2 by oliver** atau 
 Untuk membuat tampilan GUI sudah sangat mudah bisa menggunakan  [lopaka.app](https://lopaka.app/) berguna untuk merubah dari tampilan yang didesain menjadi code
 
 1. membuat project <br>
-![alt text](image.png)
+![alt text](/TP1%20Memahami%20Konsep%20Internet%20of%20Things/Pertemuan%202/Media/lopakapr.png)
 
 2. tampilan lopaka 
     - tool untuk membuat tampilan
@@ -34,7 +34,7 @@ Untuk membuat tampilan GUI sudah sangat mudah bisa menggunakan  [lopaka.app](htt
         - *Declare variable* untuk membuat tulisan yang ada ditampilan menjadi variable yang dapat dirubah dari luar
         - *Declare image* untuk mengconvert image ke code
     - code tempat code yang siap dicopy dan tab library image
-![alt text](image-1.png)
+![alt text](/TP1%20Memahami%20Konsep%20Internet%20of%20Things/Pertemuan%202/Media/lopakadg.png)
 
 ## Menggunakan Oled di ESP32
 gunakan library u8g2
