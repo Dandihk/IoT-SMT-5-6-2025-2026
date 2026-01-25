@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>UCAA-820 Exam Simulation</title>
+<style>
+body { font-family: Arial; background:#f4f4f4; padding:20px; }
+.container { background:white; padding:20px; max-width:800px; margin:auto; border-radius:8px; }
+.question { margin-bottom:20px; }
+.timer { font-size:20px; color:red; font-weight:bold; }
+button { padding:10px 20px; font-size:16px; }
+</style>
+</head>
+<body>
+
+<div class="container">
+<h2>UCAA-820 Unity Certified Associate – Artist</h2>
+<div class="timer" id="timer">Time: 60:00</div>
+<hr>
+
+<form id="examForm">
+
+<script>
+const questions = [
+["Texture function is to…","Add color and surface detail","Control animation","Control physics","Control audio","A"],
+["Best format for transparency?","JPG","PNG","BMP","GIF","B"],
+["Material connects…","Script","Texture & Shader","Audio","Camera","B"],
+["Shader controls…","Animation","Visual rendering","Physics","Input","B"],
+["Albedo means…","Base color","Reflection","Transparency","Shadow","A"],
+["Normal map is used to…","Add detail without polygons","Change color","Add light","Animate","A"],
+["Move tool shortcut?","W","E","R","T","A"],
+["Pre-calculated lighting is…","Realtime","Mixed","Baked","Dynamic","C"],
+["Lightmap stores…","Texture","Baked lighting","Audio","Camera","B"],
+["Skybox is…","Scene background","Collider","Shadow","UI","A"],
+["Sorting Layer is for…","3D","Camera","2D Sprite","Light","C"],
+["3D format for Unity?","PSD","FBX","SVG","AI","B"],
+["Pivot point is…","Color","Rotation center","Texture","Light","B"],
+["Occlusion Culling…","Deletes object","Stops rendering hidden objects","Adds light","Adds texture","B"],
+["Canvas is for…","Physics","UI","Audio","Script","B"],
+["Particle System makes…","Buttons","Effects","Camera","Colliders","B"],
+["HDR means…","Low color","High range light","No shadow","Low res","B"],
+["LOD Group…","Animation","Distance model change","Shader","Audio","B"],
+["Texture Compression…","Increase size","Reduce file size","Increase color","Add detail","B"],
+["Reflection Probe…","Animation","Environment reflection","Lightmap","Collider","B"],
+["Sprite Atlas…","Merge sprites","Save audio","Save shader","Save camera","A"],
+["FOV affects…","Color","View angle","Speed","Texture","B"],
+["Post Processing adds…","Scripts","Final visual effects","Physics","Input","B"],
+["Gizmo is…","Editor helper","Texture","Shader","Camera","A"],
+["Prefab is…","Saved reusable object","Scene","Audio","Shader","A"]
+];
+
+for(let i=0;i<questions.length;i++){
+ document.write(`<div class='question'><b>${i+1}. ${questions[i][0]}</b><br>`);
+ document.write(`<input type='radio' name='q${i}' value='A'> A. ${questions[i][1]}<br>`);
+ document.write(`<input type='radio' name='q${i}' value='B'> B. ${questions[i][2]}<br>`);
+ document.write(`<input type='radio' name='q${i}' value='C'> C. ${questions[i][3]}<br>`);
+ document.write(`<input type='radio' name='q${i}' value='D'> D. ${questions[i][4]}<br></div>`);
+}
+</script>
+
+<button type="button" onclick="submitExam()">Submit Exam</button>
+</form>
+
+<h3 id="result"></h3>
+
+</div>
+
+<script>
+let time = 60 * 60;
+const timer = document.getElementById("timer");
+
+setInterval(()=>{
+ let m = Math.floor(time/60);
+ let s = time%60;
+ timer.innerHTML = `Time: ${m}:${s<10?'0':''}${s}`;
+ if(time<=0){
+   submitExam();
+ }
+ time--;
+},1000);
+
+function submitExam(){
+ let score=0;
+ for(let i=0;i<questions.length;i++){
+   let ans = document.querySelector(`input[name="q${i}"]:checked`);
+   if(ans && ans.value==questions[i][5]) score++;
+ }
+ document.getElementById("result").innerHTML =
+ `Your Score: ${score}/${questions.length} (${Math.round(score/questions.length*100)}%)`;
+ alert("Exam Finished!");
+}
+</script>
+
+</body>
+</html>
